@@ -1,3 +1,4 @@
+# coding=utf-8
 import hashlib
 import os
 import time
@@ -172,7 +173,7 @@ class CompanyAI():
         res = requests.post(self.ai_url, headers = headers, json = data)
         res = res.json()
         print(res)
-        return f'{res['outputs'][0]['content']}\n本次AI花费RMB：[{res["cost"]}元]'
+        return f"{res['outputs'][0]['content']}\n本次AI花费RMB：[{res['cost']}元]"
 
     def get_timestamp(self):
         """

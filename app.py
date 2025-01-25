@@ -1,6 +1,12 @@
+# coding=utf-8
 from flask import Flask
+from AIBaseClass import AI
 
 app = Flask(__name__)
+
+ai = AI('''
+    你好，我是一个AI，我可以帮你分析当前路径下的output.xlsx文件
+''')
 
 @app.route('/')
 def hello():
